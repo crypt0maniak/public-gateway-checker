@@ -61,7 +61,7 @@ div.Node div.Link {
 	text-overflow: ellipsis;
 }
 
-div.Node a {
+div.Node a, div#origin-warning a {
 	text-decoration: none;
 	color: #357edd;
 	white-space: nowrap;
@@ -93,4 +93,25 @@ div.Node div.Took {
 
 div.Node.origin div.Link::after {
   content: " 💚"
+}
+div.Node:not(.online):not(:first-child) {
+  opacity: .5
+}
+
+div#origin-warning {
+  padding: .1rem 1.5rem;
+  border-left: 4px solid #e7c000;
+  background-color: #fff7d2;
+  color: #34373f;
+}
+
+div#origin-warning p {
+  letter-spacing: .5px;
+  color: #b29400;
+  font-weight: 600;
+  margin-bottom: -.4rem;
+}
+
+div#origin-warning ol, div#origin-warning p, div#origin-warning ul {
+    line-height: 1.7;
 }
